@@ -5,29 +5,29 @@
 class Whodunnit < Formula
   desc "Tool for counting and blaming lines in a repo."
   homepage "https://github.com/connorgannaway/whodunnit"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.4/whodunnit_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.5/whodunnit_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "08684c81229a5870aaca6dc48ffa0717c2ac17d87f47a4306621a03957f4cf66"
+      sha256 "f26303ecc9a822e878bb7ca3dcb9f7e14150e5743906238f2ed6702c8edc8c42"
 
       def install
         bin.install "whodunnit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.4/whodunnit_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.5/whodunnit_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "153bf05496096efdc94f14f39054baf0554709e95d220e392bd92a8bc7da0dff"
+      sha256 "548f13a4e357931cf1c7b15bc24f98ceb9c5fc09a8be55f4d0e5e0cbad2c55cd"
 
       def install
         bin.install "whodunnit"
@@ -38,12 +38,12 @@ class Whodunnit < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.4/whodunnit_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.5/whodunnit_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "e785bd0b40b7857297c7c968e316bf1ea896f82ad34e9390f60cafc3fb604fc6"
+        sha256 "423dff7aeb63de77904744dc331e0f803c88c0e2572926e2b4464887c2dc43a9"
 
         def install
           bin.install "whodunnit"
@@ -52,12 +52,12 @@ class Whodunnit < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.4/whodunnit_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/connorgannaway/whodunnit/releases/download/v0.1.5/whodunnit_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "4d70f3529eaa277d423349296133bef4913415ac8d05326e8acc563037a6bfb8"
+        sha256 "a5f3bae45ed96c3d634d598334a0da7e2ace482c6c6587d8a3979efa7fe4853c"
 
         def install
           bin.install "whodunnit"
